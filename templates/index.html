@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}" />
+    <script src="{{ url_for('static',filename='js/app.js') }}" defer></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ace.js"></script>
+</head>
+<body>
+  <div class="code">
+    <p>Code area</p>
+    <div id="editor">
+    </div>
+    <p>Input area</p>
+    <p><textarea rows="3" cols="50" id="inputArea"></textarea></p>
+  </div>
+  <p>
+  <button class="button" onclick="sendCode()">Launch</button>
+  <b id='timeout'>Set timeout:</b>
+  <input type="text" id="TOvalue">
+  </p>
+  <div class="output">
+    <p>Output</p>
+    <p><textarea rows="14" cols="50" id="outputArea" readonly></textarea></p>
+    <p>Errors</p>
+    <p><textarea rows="10" cols="50" id="errorArea" readonly></textarea></p>
+  </div>
+
+
+</body>
+</html>

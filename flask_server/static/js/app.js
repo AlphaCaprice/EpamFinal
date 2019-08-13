@@ -19,7 +19,7 @@ function sendCode(){
       type:'post',
       contentType: "application/json",
       data: data,
-      url: "http://127.0.0.1:5000/FlaskServer/",
+      url: "FlaskServer/",
       cache:false,
       async:'asynchronous',
       dataType:'json',

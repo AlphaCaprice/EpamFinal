@@ -1,12 +1,11 @@
 from subprocess import Popen, PIPE, TimeoutExpired
 import re
 
-
 def execute_code(code: str, stdin: str, timeout: float) -> dict:
     print(timeout)
     # Вставка в начало пользовательского кода
     # функции для удаления модулей и встроенных функций
-    configuration_str = "import prohibit_functions\n" \
+    configuration_str = "from flask_server import prohibit_functions\n" \
                         "prohibit_functions.prohibit()\n"
     code = configuration_str + code
     print(code)

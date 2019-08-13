@@ -4,6 +4,7 @@ editor.session.setMode("ace/mode/python");
 
 function sendCode(){
   document.getElementById("outputArea").value = "";
+  document.getElementById("errorArea").value = "";
 //  code =  document.getElementById("codeArea").value;
   code = editor.getValue();
   in_data = document.getElementById("inputArea").value;
